@@ -6,15 +6,12 @@ En el directorio /mercuryfacts/<id> hay un parámetro id que es vulnerable a SQL
 
 
 Usan sqlmap para extraer datos del usuario (por ejemplo, las credenciales almacenadas en la base de datos mercury.users). 
-Thomas Antony
 
 Credenciales débiles / uso de contraseñas extraídas
 
 Gracias a la inyección SQL, se obtiene la contraseña del usuario “webmaster” que se usa para conectarse vía SSH a la máquina. 
-Thomas Antony
 
 Después de SSH, se lee un fichero notes.txt (o similar) que contiene una contraseña codificada en base64 para el usuario “linuxmaster”. 
-Thomas Antony
 
 Escalada de privilegios (Privilege Escalation) mediante explotación local
 
