@@ -1,38 +1,29 @@
 services:
   mysql:
-    build: ./database
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mercury
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-  server:
-    build: ./server
-    container_name: server
-    ports:
-      - "8000:8000"
-
-volumes:
-  mysql_data:
-
-services:
-  machine1:
     image: web-machine
     hostname: web-machine
-    build: machine
+    build: database/machine
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - internal_net
+  server:
+    image: web-machine
+    hostname: web-machine
+    build: server/machine
     volumes:
       - ./flag:/flag
     ports:
-      - 8080:80
+      - 8000:8000
     networks:
       - internal_net
 
 networks:
   internal_net:
     driver: bridge
+
+  
+volumes:
+  mysql_data:

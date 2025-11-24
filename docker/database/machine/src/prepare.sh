@@ -1,0 +1,1 @@
+apt update && apt install -y sudo passwd ssh mysql && apt clean

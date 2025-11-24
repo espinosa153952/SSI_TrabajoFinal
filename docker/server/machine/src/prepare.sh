@@ -1,0 +1,1 @@
+apt update && apt install -y sudo passwd ssh python build-essential default-libmysqlclient-dev pkg-config && apt clean

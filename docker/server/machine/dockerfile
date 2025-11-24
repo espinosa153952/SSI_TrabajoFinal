@@ -1,0 +1,20 @@
+# Imagen base mínima
+FROM debian
+
+# Crear el directorio de trabajo
+COPY src /opt/src/
+WORKDIR /app
+
+RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
+
+# Copiar el proyecto Django
+COPY ./mercury_proj /app
+
+# Instalar dependencias de Python
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Exponer puerto
+EXPOSE 8000
+
+CMD ["bash"]
+ENTRYPOINT ["/opt/src/execute.sh"]
