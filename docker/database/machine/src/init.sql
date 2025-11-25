@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS mercury;
+
+USE mercury;
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     password VARCHAR(255) NOT NULL,

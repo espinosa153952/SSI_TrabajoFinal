@@ -1,1 +1,1 @@
-apt update && apt install -y sudo passwd ssh mysql && apt clean
+apt update && apt install -y sudo passwd ssh mariadb-server && apt clean

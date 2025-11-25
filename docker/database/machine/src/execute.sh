@@ -1,7 +1,9 @@
 #! /bin/bash
 
-service mysql start
+service mariadb start
 service ssh start
+
+/bin/bash /opt/src/initMariaDB.sh
 
 while [ 1 == 1 ]; do
 
