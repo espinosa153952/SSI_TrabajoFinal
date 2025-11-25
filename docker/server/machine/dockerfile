@@ -1,9 +1,8 @@
-# Imagen base mínima
 FROM debian
 
-# Crear el directorio de trabajo
-COPY src /opt/src/
 WORKDIR /app
+COPY src /opt/src/
+
 
 RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
 
