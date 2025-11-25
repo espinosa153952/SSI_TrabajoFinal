@@ -1,18 +1,11 @@
 FROM debian
 
-WORKDIR /app
 COPY src /opt/src/
+COPY ./mercury_proj /opt/src/app
 
+RUN cd /opt/src/; chmod 777 prepare.sh; 
+RUN cd /opt/src/; ./prepare.sh;
 
-RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
-
-# Copiar el proyecto Django
-COPY ./mercury_proj /app
-
-# Instalar dependencias de Python
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Exponer puerto
 EXPOSE 8000
 
 CMD ["bash"]

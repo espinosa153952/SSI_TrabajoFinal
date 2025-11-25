@@ -1,7 +1,7 @@
 #! /bin/bash
 
 service ssh start
-python manage.py runserver "0.0.0.0:8000"
+python3 /opt/src/app/manage.py runserver "0.0.0.0:8000"
 
 while [ 1 == 1 ]; do
 
@@ -10,5 +10,3 @@ while [ 1 == 1 ]; do
 	sleep 1;
 
 done;
-
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

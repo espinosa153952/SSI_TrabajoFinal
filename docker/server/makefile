@@ -6,6 +6,7 @@ remove:
 	docker rmi image_server
 
 build:
+	/bin/bash start.sh
 	docker build -t image_server ./machine
 
 run:
@@ -16,3 +17,6 @@ stop:
 
 bash:
 	docker exec -it server /bin/bash
+
+logs:
+	docker logs server
