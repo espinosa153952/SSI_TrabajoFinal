@@ -1,18 +1,16 @@
 services:
-  mysql:
-    image: web-machine
-    hostname: web-machine
+  db:
     build: database/machine
+    container_name: db
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
     ports:
       - 3306:3306
     networks:
       - internal_net
   server:
-    image: web-machine
-    hostname: web-machine
     build: server/machine
+    container_name: server
     volumes:
       - ./flag:/flag
     ports:
@@ -24,6 +22,5 @@ networks:
   internal_net:
     driver: bridge
 
-  
 volumes:
-  mysql_data:
+  mariadb_data:
