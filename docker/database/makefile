@@ -2,17 +2,17 @@ main: build run
 clean: stop remove
 
 remove: 
-	docker rm mariaDB
-	docker rmi image_mariaDB
+	docker rm mariadb
+	docker rmi image_mariadb
 
 build:
-	docker build -t image_mariaDB ./machine
+	docker build -t image_mariadb ./machine
 
 run:
-	docker run -d --name mariaDB -p 3306:3306 image_mariaDB
+	docker run -d --name mariadb -p 3306:3306 image_mariadb
 
 stop:
-	docker stop mariaDB
+	docker stop mariadb
 
 bash:
-	docker exec -it mariaDB /bin/bash
+	docker exec -it mariadb /bin/bash
