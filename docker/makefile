@@ -8,7 +8,7 @@ dbBash:
 	docker exec -it db bash
 
 dbLogs:
-	docker db server
+	docker logs db 
 
 serverBash:
 	docker exec -it server bash

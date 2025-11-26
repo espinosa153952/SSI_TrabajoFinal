@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mercury',
-        'USER': 'dbmaster',
-        'PASSWORD': '8cSQK0HMJtNxaJwsKwgDwo',
-        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': 'server',
+        'HOST': 'db',
         'PORT': '3306',
     }
 }
