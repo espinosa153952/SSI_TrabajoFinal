@@ -1,1 +1,1 @@
-apt update && apt install -y mariadb-client sudo passwd ssh python3 build-essential default-libmysqlclient-dev pkg-config python3-django python3-mysqldb && apt clean
+apt update && apt install -y mariadb-client python3 build-essential default-libmysqlclient-dev pkg-config python3-django python3-mysqldb && apt clean

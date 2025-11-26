@@ -3,8 +3,7 @@ FROM debian
 COPY src /opt/src/
 COPY ./mercury_proj /opt/src/app
 
-RUN cd /opt/src/; chmod 777 prepare.sh; 
-RUN cd /opt/src/; ./prepare.sh;
+RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
 
 EXPOSE 8000
 

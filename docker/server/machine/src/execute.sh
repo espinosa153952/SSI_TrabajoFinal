@@ -1,7 +1,5 @@
 #! /bin/bash
 
-service ssh start
-
 until mysqladmin --ssl=0 -h db -u root -pserver ping; do
     sleep 1;
 done

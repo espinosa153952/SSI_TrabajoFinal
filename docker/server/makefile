@@ -6,7 +6,6 @@ remove:
 	docker rmi image_server
 
 build:
-	/bin/bash start.sh
 	docker build -t image_server ./machine
 
 run:
