@@ -2,8 +2,7 @@
 
 service ssh start
 
-until RESULT=`mysql ping -h db -u root`; do
-	echo $RESULT;
+until mysqladmin --ssl=0 -h db -u root -pserver ping; do
     sleep 1;
 done
 

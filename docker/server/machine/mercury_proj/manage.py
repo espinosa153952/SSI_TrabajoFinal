@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    print("manage.py executing with params: " + sys.argv);
+    print("manage.py executing with params: {}".format(sys.argv));
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mercury_proj.settings')
     try:
