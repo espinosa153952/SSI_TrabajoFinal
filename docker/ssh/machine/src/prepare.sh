@@ -1,5 +1,5 @@
 #! /bin/bash
-apt update && apt install -y sudo passwd ssh && apt clean;
+apt update && apt install -y sudo passwd ssh rsyslog systemctl && apt clean;
 
 useradd -m -s /bin/bash linuxmaster;
 useradd -m -s /bin/bash mercury;
@@ -16,4 +16,4 @@ echo "MERCURY ES SUDO";
 
 echo "linuxmaster ALL=(root) NOPASSWD: /usr/bin/check_syslog.sh" > /etc/sudoers.d/linuxmaster;
 chmod 440 /etc/sudoers.d/linuxmaster;
-sudo chmod +x /usr/bin/check_syslog.sh
+chmod +x /usr/bin/check_syslog.sh
