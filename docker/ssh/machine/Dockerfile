@@ -1,0 +1,20 @@
+# Imagen base mínima
+FROM debian
+
+COPY src/execute.sh /opt/src/
+COPY src/prepare.sh /opt/src/
+COPY src/check_syslog.sh /usr/bin/
+
+RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
+
+COPY flag/user_flag.txt /home/webmaster/
+COPY flag/root_flag.txt /home/mercury
+COPY src/notes.txt /home/webmaster/
+
+RUN chmod 777 /home/webmaster/user_flag.txt /home/webmaster/notes.txt;
+
+EXPOSE 22
+
+# Comando por defecto al iniciar el contenedor
+CMD ["bash"]
+ENTRYPOINT ["/opt/src/execute.sh"]
