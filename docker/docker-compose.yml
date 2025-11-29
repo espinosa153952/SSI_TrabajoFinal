@@ -8,17 +8,25 @@ services:
       - 3306:3306
     networks:
       - internal_net
+
   server:
     build: server/machine
     container_name: server
-    volumes:
-      - ./flag:/flag
     ports:
       - 8000:8000
     networks:
       - internal_net
     depends_on:
       - db
+
+  ssh:
+    build: ssh/machine
+    container_name: ssh
+    ports:
+      - 22:22
+    networks:
+      - internal_net
+
 
 networks:
   internal_net:
