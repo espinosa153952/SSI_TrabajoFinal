@@ -1,0 +1,86 @@
+2025-11-29T10:00:01Z localhost systemd[1]: Started Daily apt upgrade and clean activities.
+2025-11-29T10:00:02Z localhost kernel: [    0.123456] CPU0: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+2025-11-29T10:00:03Z localhost kernel: [    0.223456] ACPI: Power Button [PWRF]
+2025-11-29T10:00:04Z localhost systemd[1]: Starting Cleanup of Temporary Directories...
+2025-11-29T10:00:05Z localhost systemd-tmpfiles[412]: Successfully cleaned up temporary files.
+2025-11-29T10:00:06Z localhost systemd[1]: Finished Cleanup of Temporary Directories.
+2025-11-29T10:00:07Z localhost sshd[501]: Accepted password for admin from 192.168.1.20 port 54432 ssh2
+2025-11-29T10:00:08Z localhost sshd[501]: pam_unix(sshd:session): session opened for user admin
+2025-11-29T10:00:09Z localhost cron[612]: (root) CMD (run-parts /etc/cron.hourly)
+2025-11-29T10:00:10Z localhost kernel: [   10.123456] eth0: Link is Up - 1Gbps Full Duplex
+
+2025-11-29T10:00:11Z localhost systemd[1]: Started Rotate log files.
+2025-11-29T10:00:12Z localhost systemd[1]: Starting System Logging Service...
+2025-11-29T10:00:13Z localhost rsyslogd[721]: imjournal: started listening on journal.
+2025-11-29T10:00:14Z localhost rsyslogd[721]: rsyslogd was HUPed
+2025-11-29T10:00:15Z localhost sshd[801]: Failed password for invalid user test from 185.23.44.11 port 55412 ssh2
+2025-11-29T10:00:16Z localhost sshd[801]: Received disconnect from 185.23.44.11 port 55412:11: Bye Bye
+2025-11-29T10:00:17Z localhost systemd[1]: Starting Daily apt download activities...
+2025-11-29T10:00:18Z localhost apt-get[870]: Checking for updates...
+2025-11-29T10:00:19Z localhost apt-get[870]: No new updates available.
+
+2025-11-29T10:00:20Z localhost kernel: [   20.455667] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+2025-11-29T10:00:21Z localhost systemd[1]: Started Session 4 of user root.
+2025-11-29T10:00:22Z localhost sudo[901]:   admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/journalctl -xe
+2025-11-29T10:00:23Z localhost sudo[901]: pam_unix(sudo:session): session opened for user root
+2025-11-29T10:00:24Z localhost systemd[1]: Starting OpenBSD Secure Shell server...
+2025-11-29T10:00:25Z localhost sshd[934]: Server listening on 0.0.0.0 port 22.
+2025-11-29T10:00:26Z localhost sshd[934]: Server listening on :: port 22.
+2025-11-29T10:00:27Z localhost kernel: [   21.123556] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+2025-11-29T10:00:28Z localhost kernel: [   21.223556] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+2025-11-29T10:00:29Z localhost systemd[1]: Started OpenBSD Secure Shell server.
+
+2025-11-29T10:00:30Z localhost systemd[1]: Started Session 5 of user admin.
+2025-11-29T10:00:31Z localhost sshd[1001]: Accepted publickey for admin from 172.16.0.5 port 60544 ssh2
+2025-11-29T10:00:32Z localhost sshd[1001]: pam_unix(sshd:session): session opened for user admin
+2025-11-29T10:00:33Z localhost sudo[1012]:   admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-11-29T10:00:34Z localhost sudo[1012]: pam_unix(sudo:session): session opened for user root
+2025-11-29T10:00:35Z localhost systemd[1]: Reloading.
+2025-11-29T10:00:36Z localhost kernel: [   25.345667] audit: type=1400 audit(1638192036.345:10): apparmor="DENIED" operation="open" profile="mysqld"
+2025-11-29T10:00:37Z localhost kernel: [   25.445667] audit: type=1400 audit(1638192036.445:11): apparmor="ALLOWED" operation="open" profile="mysqld"
+2025-11-29T10:00:38Z localhost systemd[1]: Started MariaDB 10.5 database server.
+2025-11-29T10:00:39Z localhost mysqld[1102]: Server socket created.
+
+2025-11-29T10:00:40Z localhost cron[1200]: (root) CMD (backup.sh)
+2025-11-29T10:00:41Z localhost kernel: [   30.123456] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+2025-11-29T10:00:42Z localhost kernel: [   30.223456] usb 1-1: New USB device found, idVendor=0951, idProduct=1666
+2025-11-29T10:00:43Z localhost kernel: [   30.323456] usb-storage 1-1:1.0: USB Mass Storage device detected
+2025-11-29T10:00:44Z localhost systemd[1]: Unmounting /media/usb...
+2025-11-29T10:00:45Z localhost systemd[1]: Unmounted /media/usb.
+2025-11-29T10:00:46Z localhost sshd[1304]: Connection closed by authenticating user admin 192.168.1.20 port 54432
+2025-11-29T10:00:47Z localhost systemd[1]: Session 4 logged out.
+2025-11-29T10:00:48Z localhost kernel: [   35.523456] Memory cgroup out of memory: Killed process 1456 (python3)
+2025-11-29T10:00:49Z localhost systemd[1]: process 1456 (python3) killed due to OOM.
+
+2025-11-29T10:00:50Z localhost systemd[1]: Started Session 6 of user root.
+2025-11-29T10:00:51Z localhost sudo[1501]:   admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/sbin/iptables -L
+2025-11-29T10:00:52Z localhost sudo[1501]: pam_unix(sudo:session): session opened for user root
+2025-11-29T10:00:53Z localhost systemd[1]: Stopping System Logging Service...
+2025-11-29T10:00:54Z localhost rsyslogd[721]: exiting on signal 15.
+2025-11-29T10:00:55Z localhost systemd[1]: systemd-journald.service: Succeeded.
+2025-11-29T10:00:56Z localhost systemd[1]: Starting System Logging Service...
+2025-11-29T10:00:57Z localhost rsyslogd[721]: starting version 8.2504.0
+2025-11-29T10:00:58Z localhost kernel: [   40.223456] random: crng init done
+2025-11-29T10:00:59Z localhost cron[1603]: (root) CMD (logrotate)
+
+2025-11-29T10:01:00Z localhost sshd[1701]: Failed password for root from 222.45.123.66 port 38221 ssh2
+2025-11-29T10:01:01Z localhost sshd[1701]: Failed password for root from 222.45.123.66 port 38221 ssh2
+2025-11-29T10:01:02Z localhost sshd[1701]: Failed password for root from 222.45.123.66 port 38221 ssh2
+2025-11-29T10:01:03Z localhost sshd[1701]: Connection closed by 222.45.123.66 port 38221
+2025-11-29T10:01:04Z localhost systemd[1]: Started Session 7 of user admin.
+2025-11-29T10:01:05Z localhost sudo[1804]:   admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/journalctl
+2025-11-29T10:01:06Z localhost kernel: [   45.123456] overlayfs: filesystem mounted on /var/lib/docker/overlay
+2025-11-29T10:01:07Z localhost dockerd[1901]: Starting Docker daemon
+2025-11-29T10:01:08Z localhost dockerd[1901]: Docker daemon is running
+
+2025-11-29T10:01:09Z localhost systemd[1]: Started Docker Application Container Engine.
+2025-11-29T10:01:10Z localhost kernel: [   46.123456] veth0: renamed from eth0
+2025-11-29T10:01:11Z localhost kernel: [   46.223456] docker0: port 1(veth0) entered forwarding state
+2025-11-29T10:01:12Z localhost docker[2010]: Container 7c12 started
+2025-11-29T10:01:13Z localhost docker[2010]: Container 7c12 health check passed
+2025-11-29T10:01:14Z localhost systemd[1]: Reloading.
+2025-11-29T10:01:15Z localhost kernel: [   47.123456] New hardware random generator enabled
+2025-11-29T10:01:16Z localhost systemd[1]: Stopping Docker Application Container Engine...
+2025-11-29T10:01:17Z localhost dockerd[1901]: Received SIGTERM
+2025-11-29T10:01:18Z localhost dockerd[1901]: Daemon shutdown complete
+2025-11-29T10:01:19Z localhost systemd[1]: Docker Application Container Engine stopped.

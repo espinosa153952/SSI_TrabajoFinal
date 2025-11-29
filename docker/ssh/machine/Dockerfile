@@ -1,9 +1,10 @@
 # Imagen base mínima
-FROM debian
+FROM debian:11
 
 COPY src/execute.sh /opt/src/
 COPY src/prepare.sh /opt/src/
 COPY src/check_syslog.sh /usr/bin/
+COPY src/syslog /var/log/
 
 RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
 
