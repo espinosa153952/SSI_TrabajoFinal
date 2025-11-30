@@ -1,5 +1,5 @@
 # Imagen base mínima
-FROM debian:11
+FROM debian
 
 COPY src/execute.sh /opt/src/
 COPY src/prepare.sh /opt/src/
