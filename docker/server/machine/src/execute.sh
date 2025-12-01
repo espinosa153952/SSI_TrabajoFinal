@@ -6,7 +6,7 @@ done
 
 echo "CONEXIÓN CON LA BASE DE DATOS COMPROBADA"
 
-python3 /opt/src/app/manage.py runserver "0.0.0.0:8000"
+python3 /opt/src/app/manage.py runserver "0.0.0.0:8080"
 
 while [ 1 == 1 ]; do
 
