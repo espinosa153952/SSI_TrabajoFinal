@@ -9,7 +9,7 @@ COPY src/syslog /var/log/
 RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
 
 COPY flag/user_flag.txt /home/webmaster/
-COPY flag/root_flag.txt /home/mercury
+COPY flag/root_flag.txt /root/
 COPY src/notes.txt /home/webmaster/
 
 RUN chmod 777 /home/webmaster/user_flag.txt /home/webmaster/notes.txt;
