@@ -1,5 +1,5 @@
 #! /bin/bash
-apt update && apt install -y sudo passwd ssh && apt clean;
+apt update && apt install -y sudo passwd ssh vim && apt clean;
 
 useradd -m -s /bin/bash linuxmaster;
 useradd -m -s /bin/bash mercury;
@@ -19,3 +19,4 @@ chmod 744 /usr/bin/check_syslog.sh
 
 echo "linuxmaster ALL=(root) NOPASSWD: /usr/bin/check_syslog.sh" > /etc/sudoers.d/linuxmaster;
 chmod 440 /etc/sudoers.d/linuxmaster;
+echo 'Defaults:linuxmaster !secure_path' >> /etc/sudoers.d/linuxmaster

