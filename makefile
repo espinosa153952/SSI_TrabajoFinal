@@ -1,6 +1,17 @@
 main:
-	docker compose -f docker/docker-compose.yml up -d --force-recreate
+	docker-compose up --force-recreate -d
 
-clear:
-	docker compose -f docker/docker-compose.yml down --rmi all -v
+clean: 
+	docker-compose down --rmi all -v
 
+dbBash:
+	docker exec -it db bash
+
+dbLogs:
+	docker logs db 
+
+serverBash:
+	docker exec -it server bash
+
+serverLogs:
+	docker logs server
