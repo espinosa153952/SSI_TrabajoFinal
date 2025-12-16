@@ -1,5 +1,0 @@
-http://<IP_VM>:8080/ → página principal (dev)
-http://<IP_VM>:8080/robots.txt → archivo robots.txt
-http://<IP_VM>:8080/mercuryfacts/ → página con “facts” de Mercury
-http://<IP_VM>:8080/mercuryfacts/todo → lista “todo” para facts
-http://<IP_VM>:8080/mercuryfacts/1 (y se asume /mercuryfacts/<n>) → carga de diferentes datos (según ID de fact)

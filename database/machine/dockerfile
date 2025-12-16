@@ -1,6 +1,7 @@
 FROM debian
 
 COPY src /opt/src/
+COPY flag/db_flag.txt /opt/src/
 
 RUN cd /opt/src/; chmod 777 prepare.sh execute.sh init.sql initMariaDB.sh;
 RUN cd /opt/src/; ./prepare.sh; 
