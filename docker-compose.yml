@@ -5,7 +5,7 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
     networks:
       - internal_net
 
@@ -13,7 +13,7 @@ services:
     build: server/machine
     container_name: server
     ports:
-      - 8080:8080
+      - "8080:8080"
     networks:
       - internal_net
     depends_on:
@@ -23,7 +23,7 @@ services:
     build: ssh/machine
     container_name: ssh
     ports:
-      - 22:22
+      - "${SSH_PORT:-22000}:22"
     networks:
       - internal_net
 
