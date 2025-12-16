@@ -4,3 +4,6 @@ main:
 
 clean: 
 	docker-compose down --rmi all -v
+
+init:
+	/bin/bash init.sh
