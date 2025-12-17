@@ -4,8 +4,6 @@ services:
     container_name: db
     volumes:
       - mariadb_data:/var/lib/mysql
-    ports:
-      - "3306:3306"
     networks:
       - internal_net
 
