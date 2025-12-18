@@ -1,7 +1,6 @@
 FROM debian
 
 COPY src/ /opt/src/
-COPY src/ /opt/src/
 
 RUN cd /opt/src/; chmod 777 prepare.sh; ./prepare.sh;
 

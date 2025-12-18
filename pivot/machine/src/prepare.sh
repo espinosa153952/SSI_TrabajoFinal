@@ -1,5 +1,5 @@
 #! /bin/bash
-apt update && apt install -y ssh && apt clean;
+apt update && apt install -y ssh sqlmap nmap && apt clean;
 
 useradd -m -s /bin/bash ssi;
 echo "USUARIOS CREADOS";
