@@ -1,4 +1,3 @@
-DB_NAME="mercury"
 INIT_SQL="/opt/src/init.sql"
 
 until mysqladmin ping -h 127.0.0.1 -u root --silent; do
