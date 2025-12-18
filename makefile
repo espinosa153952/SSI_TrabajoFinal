@@ -7,3 +7,9 @@ clean:
 
 init:
 	/bin/bash init.sh
+
+pivotingServer:
+	sshpass -p 'ssi' ssh ssi@localhost -L 8080:server:8080 -N -T
+
+pivotingSSH:
+	sshpass -p 'ssi' ssh ssi@localhost -L 22000:ssh:22 -N -T

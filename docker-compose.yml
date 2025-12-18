@@ -10,8 +10,6 @@ services:
   server:
     build: server/machine
     container_name: server
-    ports:
-      - "8080:8080"
     networks:
       - internal_net
     depends_on:
@@ -20,11 +18,16 @@ services:
   ssh:
     build: ssh/machine
     container_name: ssh
-    ports:
-      - "${SSH_PORT:-22000}:22"
     networks:
       - internal_net
 
+  pivot:
+    build: pivot/machine
+    container_name: pivot
+    ports:
+      - "22:22"
+    networks:
+      - internal_net
 
 networks:
   internal_net:

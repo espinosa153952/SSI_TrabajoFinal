@@ -1,4 +1,3 @@
-# Imagen base mínima
 FROM debian
 
 COPY src/execute.sh /opt/src/
@@ -14,8 +13,7 @@ COPY src/notes.txt /home/webmaster/
 
 RUN chmod 777 /home/webmaster/user_flag.txt /home/webmaster/notes.txt;
 
-EXPOSE 22
+#Puerto 22
 
-# Comando por defecto al iniciar el contenedor
 CMD ["bash"]
 ENTRYPOINT ["/opt/src/execute.sh"]
